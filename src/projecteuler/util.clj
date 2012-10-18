@@ -13,4 +13,16 @@
   (find-divisor n 2))
 
 (defn prime? [n]
-  (= n (smallest-divisor n)))
+  (if (< n 2)
+    false
+    (= n (smallest-divisor n))))
+
+(defn integers-starting-from [n]
+  (lazy-seq (cons n (integers-starting-from (+ n 1)))))
+
+(defn sieve [stream]
+  (lazy-seq (cons (first stream)
+                  (sieve (remove #(divides? (first stream) %)
+                                 (rest stream))))))
+
+(def primes (sieve (integers-starting-from 2)))

@@ -25,4 +25,8 @@
        (left-truncatable-prime? n)))
 
 (defn p037 []
-  (filter #(truncatable-prime? (str %)) (take 1100 primes)))
+  (filter #(truncatable-prime? (str %)) (take 1000 primes))
+  ;;  (truncatable-prime? (str 739397))
+;;  (take 9999000 (integers-starting-from 2))
+;;  true
+  )

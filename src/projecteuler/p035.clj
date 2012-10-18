@@ -39,6 +39,5 @@
   (every? prime? (digit-rotations n)))
 
 (defn p035 []
-  (count (filter circular-prime?
-                 (for [x (range 2 1000000)] x))))
+  (count (filter circular-prime? (range 2 1000000))))
 
