@@ -14,9 +14,6 @@
 
 (use 'projecteuler.util)
 
-(defn- char2int [n]
-  (- (int n) (int \0)))
-
 (defn- array-rotate [array num-items]
   (let [
         head (take num-items array)
