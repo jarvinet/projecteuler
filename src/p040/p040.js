@@ -1,7 +1,3 @@
-function numberOfDigitsInNumber(n) {
-    return Math.floor(Math.log10(n))+1;
-}
-
 var string = ".";
 var i = 1;
 while (string.length < 1000010) {
