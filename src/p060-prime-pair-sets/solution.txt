@@ -1,0 +1,3 @@
+just run
+node p060.js
+this takes a few minutes to run, but does produce the array of five primes that add up to the solution
