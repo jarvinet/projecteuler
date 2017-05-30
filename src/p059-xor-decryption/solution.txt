@@ -1,0 +1,16 @@
+key 103 111 100
+
+1) run 
+node p059.js > p059.txt
+this generates all possible decryptions of the encrypted text and store them in file p059.txt
+
+2) run
+awk 'length>3' /usr/share/dict/words > words_gt3.txt
+this takes the system dictionary and filters out all words that are less than four characters in length and stores them in file words_gt3.txt
+
+3) run
+cat words_gt3.txt | xargs -I{} grep {} p059.txt > p059_filtered.txt
+this takes the file with words longer than 3 in length and feeds them to grep that then find the words in generated file with all possible decryptions. this step basically makes the file p059.txt shorter so that it is easier to inspect.
+
+4) examine file p059_filtered.txt, you will find that key 103 111 100 is the right key and decrypted text is 
+
