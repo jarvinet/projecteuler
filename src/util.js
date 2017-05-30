@@ -1,3 +1,30 @@
+
+// sieve of eratosthenes
+function sieve(firstItem, arr) {
+    return arr.filter(function(item) {
+        return item % firstItem > 0;
+    });
+}
+
+function findPrimes(arr) {
+    var primes = [];
+    while (arr.length > 0) {
+        var firstItem = arr[0];
+        primes.push(firstItem);
+        arr = sieve(firstItem, arr);
+    }
+    return primes;
+}
+
+function genArray(start, end) {
+    var result =[];
+    for (var i = start; i < end; i++) {
+        result.push(i);
+    }
+    return result;
+}
+
+
 // This version has the fewest lines of code - but is very slow.
 // It checks if n is dividible by every integer 2, 3, 4, 5 ... 
 // up to sqrt(n)
