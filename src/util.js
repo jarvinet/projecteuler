@@ -75,10 +75,6 @@ function isInteger(n) {
     return n == parseInt(n);
 }
 
-function isSquareNumber(n) {
-    return n > 0 && Math.sqrt(n) % 1 === 0;
-}
-
 function isTriangleNumber(n) {
     return isSquareNumber(8*n+1);
 }
@@ -87,13 +83,21 @@ function generateNthTriangleNumber(n) {
     return n*(n+1)/2;
 }
 
+function isSquareNumber(n) {
+    return n > 0 && Math.sqrt(n) % 1 === 0;
+}
+
+function generateNthSquareNumber(n) {
+    return n*n;
+}
+
 function isPentagonalNumber(n) {
     var x = (Math.sqrt(24*n+1)+1)/6;
     return isInteger(x);
 }
 
 function generateNthPentagonalNumber(n) {
-    return (3*n*n - n)/2;
+    return n*(3*n - 1)/2;
 }
 
 function isHexagonalNumber(n) {
@@ -103,6 +107,14 @@ function isHexagonalNumber(n) {
 
 function generateNthHexagonalNumber(n) {
     return n*(2*n-1);
+}
+
+function generateNthHeptagonalNumber(n) {
+    return n*(5*n-3)/2;
+}
+
+function generateNthOctagonalNumber(n) {
+    return n*(3*n-2);
 }
 
 function permutator(inputArr) {
