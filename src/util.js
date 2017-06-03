@@ -182,3 +182,35 @@ function leastFactor(n) {
     }
     return n;
 }
+
+function numbersToStrings(arrayOfNumbers) {
+    return arrayOfNumbers.map(function(number) {
+        return number.toString();
+    });
+}
+
+function stringsToNumbers(arrayOfStrings) {
+    return arrayOfStrings.map(function(currentValue, index, array) {
+        return parseInt(currentValue);
+    });
+}
+
+// 123 -> "123" numberToString
+function numberToString(number) {
+    return number.toString();
+}
+
+// "123" -> ['1', '2', '3'] stringToArray
+function stringToArray(string) {
+    return string.split('');
+}
+
+// ['1', '2', '3'] -> "123" arrayToString
+function arrayToString(arr) {
+    return arr.join('');
+}
+
+// "123" -> 123 stringToNumber
+function stringToNumber(string) {
+    return parseInt(string);
+}
