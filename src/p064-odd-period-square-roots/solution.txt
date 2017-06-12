@@ -1,0 +1,15 @@
+Turns out this is by far the best algorithm (out of those I have thought of)
+https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Algorithm
+The algorithm is simple and fast. It calculates the continued fraction and stops when
+the period is finished so there is no need for a separate search for the period.
+This is what has been done in p064.js continuedFraction2
+
+
+for each k <= 10000
+    calculate the continued fraction of k
+    find the repeating period in the continued fraction (Knuth-Pratt-Morris)
+    get the period length mod2
+    
+kmp.js implementation of Knuth Morris Pratt algorithm to find out the period of a string.
+
+period.js another algorith by me to find the string period.
